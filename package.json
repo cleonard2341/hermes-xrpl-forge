@@ -1,0 +1,30 @@
+{
+  "name": "hermes-xrpl-forge",
+  "version": "0.1.0",
+  "description": "Reusable XRPL skills and demos — payments, on-chain skill-evolution NFTs, and multi-agent swarm coordination on the XRPL testnet.",
+  "type": "module",
+  "keywords": [
+    "xrpl",
+    "ai-agents",
+    "hermes-agent",
+    "self-improving-ai",
+    "agent-swarm",
+    "xrpl-nft",
+    "blockchain-ai",
+    "autonomous-agents",
+    "developer-tools",
+    "javascript"
+  ],
+  "scripts": {
+    "demo:payment": "node demos/demo-payment.mjs",
+    "demo:evolution": "node demos/demo-skill-evolution.mjs",
+    "demo:swarm": "node demos/demo-agent-swarm.mjs",
+    "demo:full": "node demos/demo-full-run.mjs",
+    "skill:send": "node skills/xrpl_send_payment.mjs",
+    "skill:mint": "node skills/xrpl_mint_skill_evolution.mjs"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "xrpl": "^4.6.0"
+  }
+}

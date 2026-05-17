@@ -1,0 +1,15 @@
+# XRPL Testnet Wallet — EXAMPLE
+#
+# 1. Get a funded testnet wallet from the XRPL Testnet Faucet:
+#       https://xrpl.org/xrp-testnet-faucet.html
+#
+# 2. Copy this file to:
+#       wallet/xrpl-wallet.txt
+#    (the real file is gitignored — never commit a real seed)
+#
+# 3. Replace the placeholders below with the values shown by the faucet.
+#    Only the `Seed:` line is parsed by the scripts; the others are for your reference.
+
+Address: rEXAMPLE0000000000000000000000000000
+Seed:    sEXAMPLE000000000000000000000000
+Public Key: EXAMPLE_PUBLIC_KEY_HEX

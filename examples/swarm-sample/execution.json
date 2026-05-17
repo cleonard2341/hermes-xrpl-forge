@@ -1,0 +1,17 @@
+{
+  "agent": "Executor",
+  "timestamp": "2026-05-17T21:27:18.179Z",
+  "payment": {
+    "status": "tesSUCCESS",
+    "hash": "8D5D527299257CDFB9AD7BD59514A22B5D1734251DDA50A8D5DCFE47334D614E",
+    "ledger": 17460119,
+    "amount_xrp": "1",
+    "fee_xrp": "0.000012",
+    "memo": "Hermes Swarm Demo — Agent Coordinated Payment",
+    "destination": "rHb9CJAWyB4rj91VRWn96DkukG4bwdtyTh",
+    "balance_before": "97.999964",
+    "balance_after": "96.999952",
+    "latency_ms": 5110,
+    "explorer": "https://testnet.xrpl.org/transactions/8D5D527299257CDFB9AD7BD59514A22B5D1734251DDA50A8D5DCFE47334D614E"
+  }
+}

@@ -1,0 +1,10 @@
+node_modules/
+wallet/xrpl-wallet.txt
+.env
+.env.local
+*.log
+.DS_Store
+
+# swarm demo runtime output (regenerated on every run — see examples/swarm-sample/ for a snapshot)
+swarm-logs/
+swarm-demos/

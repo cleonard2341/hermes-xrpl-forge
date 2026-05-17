@@ -1,0 +1,59 @@
+{
+  "evolution_id": "xrpl_send_payment_v1_to_v2",
+  "skill_name": "xrpl_send_payment",
+  "author": "Hermes Agent",
+  "created_at": "2026-05-17T00:00:00Z",
+  "network": "XRPL Testnet",
+  "versions": {
+    "v1": {
+      "file": "send-payment.mjs",
+      "features": [
+        "Basic XRP payment",
+        "Reads seed from wallet file",
+        "Connects to testnet WebSocket",
+        "submitAndWait for confirmation",
+        "Prints result and hash"
+      ],
+      "limitations": [
+        "No retry logic on network failure",
+        "No memo support",
+        "No destination pre-flight check",
+        "No pre/post balance comparison",
+        "No timestamps or structured logging",
+        "Fee not shown before submission"
+      ]
+    },
+    "v2": {
+      "file": "skill-evolutions/send-payment-v2.mjs",
+      "features": [
+        "Retry logic: up to 3 attempts with exponential backoff",
+        "Mandatory memo support via CLI arg (default: Hermes Payment)",
+        "Destination account pre-flight check before submission",
+        "Fee estimation logged before submit",
+        "Structured timestamped logging (INFO / WARN / OK / ERR)",
+        "Pre and post balance confirmation from ledger",
+        "Clean professional table output"
+      ],
+      "improvements": {
+        "retry_attempts": 3,
+        "retry_backoff_ms": 2000,
+        "memo_support": true,
+        "destination_preflight": true,
+        "fee_logged_before_submit": true,
+        "balance_delta_shown": true,
+        "estimated_fee_reduction_note": "Same fee structure; added visibility reduces accidental double-sends"
+      }
+    }
+  },
+  "evolution_summary": "v1 → v2: Added retry logic (3 attempts, exponential backoff), structured timestamped logging, mandatory memo embedding, destination account pre-flight check, fee visibility before submission, and pre/post balance confirmation.",
+  "nft_metadata": {
+    "name": "Hermes Skill Evolution — xrpl_send_payment v1→v2",
+    "description": "On-chain record of an AI agent skill evolving from basic XRP payment to a production-grade implementation with retry logic, structured logging, memo support, and balance verification.",
+    "skill": "xrpl_send_payment",
+    "version_from": "v1",
+    "version_to": "v2",
+    "agent": "Hermes",
+    "network": "XRPL Testnet",
+    "standard": "NFTokenMint — Flags:8, Taxon:1"
+  }
+}
